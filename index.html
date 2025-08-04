@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ElevateMax</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo"><i class="fas fa-building"></i> ElevateMax</div>
+
+    <!-- Hamburger icon -->
+    <div class="hamburger" id="hamburger">
+      <i class="fas fa-bars" id="hamburgerIcon"></i>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="nav-links desktop-nav">
+      <a href="#">Services</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <button class="btn" style="background-color: #3b82f6;color:white;border:none;">Get Quote</button>
+    </nav>
+
+    <!-- Mobile Nav -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#">Services</a>
+      <a href="#">Projects</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <button class="btn">Get Quote</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Elevating Your World<br>with <span>Premium Lifts</span></h1>
+      <p>Experience next-level vertical mobility solutions built for safety, performance, and innovation.</p>
+      <div class="hero-buttons" style="margin: 20px;">
+        <button class="btn">Get Free Quote</button>
+        <button class="btn" style="background:#e5e7eb; color:#111827;">View Projects</button>
+      </div>
+    </div>
+
+    <div class="hero-img">
+      <img src="https://images.pexels.com/photos/1281346/pexels-photo-1281346.jpeg" alt="Gold Chandelier">
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>ElevateMax</h4>
+        <p>Reliable, safe, and innovative vertical transport solutions for modern buildings and facilities.</p>
+        <div class="socials" style="margin-top: 10px;">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li>Installation</li>
+          <li>Maintenance</li>
+          <li>Modernization</li>
+          <li>Emergency Repairs</li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fas fa-envelope"></i> info@elevatemax.com</li>
+          <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+          <li><i class="fas fa-map-marker-alt"></i> New York, NY</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2024 ElevateMax. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const hamburgerIcon = document.getElementById('hamburgerIcon');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.toggle('show');
+
+      if (mobileMenu.classList.contains('show')) {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-times');
+      } else {
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars');
+      }
+    });
+
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('show');
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars');
+      });
+    });
+  </script>
+</body>
+</html>
