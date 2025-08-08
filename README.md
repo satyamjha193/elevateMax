@@ -4,6 +4,12 @@ A modern, responsive landing page built for a fictional elevator company called 
 
 ---
 
+## 🔗 Live Preview
+
+👉 [Click here to view the live project](https://satyamjha193.github.io/elevateMax/)
+
+---
+
 ## ✨ Features
 
 - ✅ Fully responsive design  
@@ -43,6 +49,6 @@ elevatemax-landing-page/
 
 
 
-🚀 How to Run Locally
-git clone https://github.com/<your-username>/elevatemax-landing-page.git
+git clone https://github.com/satyamjha193/elevatemax-landing-page.git
 cd elevatemax-landing-page
+
